@@ -1,0 +1,7 @@
+torch
+transformers
+fastapi 
+uvicorn 
+python-multipart 
+pdfplumber 
+pandas
