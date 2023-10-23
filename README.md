@@ -39,6 +39,12 @@ npm run dev
 - Try the same sentence as before: **_My name is John, I live in Singapore and work at Microsoft._** but replace the word **_work_** with **_[MASK]_**.
 - Analyze the the result. 🧐
 
+### 5. "Trying to teach a dog to meow" 🐶
+
+- Let's do a zero-shot classification (E.g. `Xenova/bart-large-mnli`)
+- Open `client/src/app/api/text-classification/route.ts`
+- Modify the code so you can support different labels/categories `await classifier(text, ["cat1", "cat2", "cat3"]);`
+
 **_Everything looks great but how can I customize existing models?_**
 
 ## Chapter II: Integrate your fine-tuned model in your application 📲
