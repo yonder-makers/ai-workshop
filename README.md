@@ -20,8 +20,6 @@ npm install
 
 ### 2. Running in development mode
 
-> Make sure you are in `client` directory.
-
 ```bash
 npm run dev
 ```
@@ -46,10 +44,9 @@ npm run dev
 ## Chapter II: Integrate your fine-tuned model in your application
 
 > Make sure you followed the steps fine-tuning your model
+> Make sure that you are using the right Python version (3.9.6)
 
 ### 1. Install server dependencies
-
-> Make sure that you are using the right Python version (3.9.6)
 
 #### Linux/MacOS
 
@@ -71,7 +68,7 @@ pip install -r requirements.txt
 
 ### 2. Deploy your model
 
-Copy `config.json`, `pytorch_model.bin`, `training_args.bin` to `server/model`
+Copy the model directory to `server`
 
 **_Let's analyze the code_**
 
