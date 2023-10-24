@@ -50,6 +50,7 @@ npm run dev
 ## Chapter II: Integrate your fine-tuned model in your application 📲
 
 > Make sure you followed the steps fine-tuning your model
+
 > Make sure that you are using the right Python version (3.9.6)
 
 ### 1. Install server dependencies 📦
@@ -84,7 +85,7 @@ Copy the model directory to `server`
 uvicorn main:app --reload
 ```
 
-### 3. Viewing your resume sentence classification in the browser 👀
+### 3. Viewing your resume in the browser 👀
 
 #### Using Swagger UI 📊
 
