@@ -11,8 +11,11 @@
 		"source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/client/node_modules,type=volume",
 		"source=${localWorkspaceFolderBasename}-env,target=${containerWorkspaceFolder}/server/.env,type=volume",
 		"source=${localWorkspaceFolderBasename}-model,target=${containerWorkspaceFolder}/server/model,type=volume",
-		"source=${localWorkspaceFolderBasename}-cache,target=${containerWorkspaceFolder}/.cache,type=volume"
+		"source=${localWorkspaceFolderBasename}-cache,target=${containerWorkspaceFolder}/.cache,type=volume",
+		"source=${localWorkspaceFolderBasename}-pycache,target=${containerWorkspaceFolder}/server/__pycache__,type=volume"
 	],
 	"postCreateCommand": "sh .devcontainer/post-create.sh",
-	
+	"hostRequirements": {
+		"cpus": 4
+	}
 }
