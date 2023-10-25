@@ -22,7 +22,7 @@ async def root(file: Annotated[bytes, File()]):
     pdf_doc.close()
 
     model = AutoModelForSequenceClassification.from_pretrained("./model")
-    tokenizer = AutoTokenizer.from_pretrained("nghuyong/ernie-2.0-base-en")
+    tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
     classification = pipeline("text-classification", model=model, tokenizer=tokenizer)(doc_lines)
     cv_df = pd.DataFrame({"cv_line": doc_lines, "label": classification})
 
