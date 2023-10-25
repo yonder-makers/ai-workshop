@@ -38,3 +38,6 @@ client/.env*.local
 # typescript
 /client/*.tsbuildinfo
 /client/next-env.d.ts
+
+.DS_Store
+.cache
