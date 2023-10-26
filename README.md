@@ -73,13 +73,13 @@ npm run dev
 
 **_Let's discover together the HuggingFace Platform and then analyze the code 🔍_**
 
-### 4. From NER to Fill Mask 🎭
+### 3. From NER to Fill Mask 🎭
 
 - Change the model from NER to Fill Mask (E.g. `Xenova/distilbert-base-cased`):
 - Try the same sentence as before: **_My name is John, I live in Singapore and work at Microsoft._** but replace the word **_work_** with **_[MASK]_**.
 - Analyze the the result. 🧐
 
-### 5. "Trying to teach a dog to meow" 🐶
+### 4. "Trying to teach a dog to meow" 🐶
 
 - Let's do a zero-shot classification (E.g. `Xenova/bart-large-mnli`)
 - Open `client/src/app/api/text-classification/route.ts`
@@ -94,10 +94,6 @@ Check this awesome explaination: [A brief introduction to transformers](https://
 **_Then we will follow the notebook in Google Collab_** 📓
 
 ## Chapter III: Integrate your fine-tuned model in your application 📲
-
-> Make sure you followed the steps fine-tuning your model
-
-> Make sure that you are using the right Python version (3.9.6)
 
 ### 1. Deploy your model 🚢
 
