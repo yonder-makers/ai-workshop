@@ -122,3 +122,7 @@ uvicorn main:app --reload
 
 - Open your browser and navigate to `http://localhost:3000/resume`.
 - Upload your resume and analyze the UI result.
+
+#### Using Notebook 📓
+
+- In Google Colab, open `nlp_workshop_resume_analysis.ipynb` and follow the instructions.
