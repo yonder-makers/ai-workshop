@@ -5,26 +5,66 @@
 ## Prerequisites 📋
 
 - Node.js 16.14 or later 📡
-- Python 3.9.6 (`venv` and `pip` are included) 🐍
+- Python 3.9.X (`venv` and `pip` are included) 🐍
+- Docker 🐳 - Required only for DevContainer setup
+- VSCode 📝
 
-## Chapter I: Running AI in your browser with HuggingFace 🚀
+## Installation 📦
 
-### 1. Install client dependencies 📦
+### Local setup 🖥️
 
-> This step is only required if you are running the application for the first time.
+1. Clone the repository
+2. Install client dependencies inside `client` directory:
 
 ```bash
-cd client
 npm install
 ```
 
-### 2. Running in development mode 🏃
+3. Verify that Python 3.9.X is installed on your machine:
+
+```bash
+python --version # or python3 --version
+```
+
+4. Install server dependencies inside `server` directory:
+
+Linux/MacOS:
+
+```bash
+/usr/bin/python3 -m venv .env
+source .env/bin/activate
+pip install -r requirements.txt
+```
+
+Windows:
+
+```bash
+python -m venv .env
+.env\Scripts\activate.bat
+pip install -r requirements.txt
+```
+
+### Dev Container setup 🐳
+
+> :warning: **For some reason the model inferrence doesn't work as expected as it gets stuck** :warning:
+
+1. Make sure you have Docker installed and running on your machine
+2. Open VSCode
+3. Install the `Remote - Containers` extension
+4. Press `F1`, select or search for `Dev Containers: Clone Repository in Container Volume` and paste the repository URL
+5. Wait for the container to build and to install the dependencies
+
+## Chapter I: Running AI in your browser with HuggingFace 🚀
+
+### 1. Running in development mode 🏃
+
+Run the following command inside `client` directory:
 
 ```bash
 npm run dev
 ```
 
-### 3. Run your first Named Entity Recognition (NER) model 🕵️
+### 2. Run your first Named Entity Recognition (NER) model 🕵️
 
 - Open your browser and navigate to `http://localhost:3000`. 🌐
 - Type a sentence in English in the text area: **_My name is John, I live in Singapore and work at Microsoft._**
@@ -47,39 +87,27 @@ npm run dev
 
 **_Everything looks great but how can I customize existing models?_**
 
-## Chapter II: Integrate your fine-tuned model in your application 📲
+## Chapter II: Fine-tuning a model with HuggingFace 🎓
+
+Check this awesome explaination: [A brief introduction to transformers](https://ig.ft.com/generative-ai/) 📰
+
+**_Then we will follow the notebook in Google Collab_** 📓
+
+## Chapter III: Integrate your fine-tuned model in your application 📲
 
 > Make sure you followed the steps fine-tuning your model
 
 > Make sure that you are using the right Python version (3.9.6)
 
-### 1. Install server dependencies 📦
+### 1. Deploy your model 🚢
 
-#### Linux/MacOS
-
-```bash
-cd server
-/usr/bin/python3 -m venv .env
-source .env/bin/activate
-pip install -r requirements.txt
-```
-
-#### Windows
-
-```bash
-cd server
-python -m venv .env
-.env\Scripts\activate.bat
-pip install -r requirements.txt
-```
-
-### 2. Deploy your model 🚢
-
-Copy the model directory to `server`
+Copy the `model` directory to `server`
 
 **_Let's analyze the code 🔍_**
 
 ### 2. Running the server 🏃
+
+Run the following command inside `server` directory:
 
 ```bash
 uvicorn main:app --reload
